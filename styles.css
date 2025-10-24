@@ -1,0 +1,432 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+}
+
+/* Navigation Styles */
+.navigation {
+    margin-bottom: 20px;
+}
+
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 4px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.nav-tab {
+    background: none;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #6c757d;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    min-width: 120px;
+}
+
+.nav-tab:hover {
+    color: #495057;
+    background-color: #e9ecef;
+}
+
+.nav-tab.active {
+    background-color: #ffffff;
+    color: #2c3e50;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Content */
+.main-content {
+    width: 100%;
+}
+
+/* Course Grid */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Course Card Styles */
+.course-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+}
+
+.course-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.course-image {
+    height: 200px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.course-title {
+    padding: 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #2c3e50;
+    text-align: center;
+    margin: 0;
+}
+
+/* Geometric Shapes for Course 1 */
+.geometric-shapes {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.cube {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    transform: rotate(45deg);
+    border-radius: 4px;
+}
+
+.cylinder {
+    width: 35px;
+    height: 50px;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+
+.sphere {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    border-radius: 50%;
+}
+
+/* 3D Printer for Course 2 */
+.printer-3d {
+    position: relative;
+    width: 120px;
+    height: 80px;
+}
+
+.printer-body {
+    width: 100px;
+    height: 60px;
+    background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+    border-radius: 8px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.printer-bed {
+    width: 80px;
+    height: 8px;
+    background: linear-gradient(135deg, #34495e, #2c3e50);
+    border-radius: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+}
+
+.printer-nozzle {
+    width: 6px;
+    height: 15px;
+    background: #e74c3c;
+    border-radius: 3px;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.filament {
+    width: 2px;
+    height: 20px;
+    background: #f39c12;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Bridge Structure for Course 3 */
+.bridge-structure {
+    position: relative;
+    width: 140px;
+    height: 60px;
+}
+
+.bridge-pillar {
+    width: 8px;
+    height: 40px;
+    background: linear-gradient(135deg, #34495e, #2c3e50);
+    position: absolute;
+    bottom: 0;
+}
+
+.bridge-pillar:nth-child(1) { left: 20px; }
+.bridge-pillar:nth-child(2) { left: 66px; }
+.bridge-pillar:nth-child(3) { right: 20px; }
+
+.bridge-deck {
+    width: 120px;
+    height: 6px;
+    background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    border-radius: 3px;
+}
+
+.bridge-cable {
+    width: 100px;
+    height: 2px;
+    background: #3498db;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    border-radius: 1px;
+}
+
+/* Circuit Board for Course 4 */
+.circuit-board {
+    position: relative;
+    width: 100px;
+    height: 80px;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    border-radius: 8px;
+}
+
+.circuit-line {
+    position: absolute;
+    background: #f39c12;
+    border-radius: 1px;
+}
+
+.circuit-line:nth-child(1) {
+    width: 60px;
+    height: 2px;
+    top: 20px;
+    left: 20px;
+}
+
+.circuit-line:nth-child(2) {
+    width: 2px;
+    height: 40px;
+    top: 20px;
+    right: 30px;
+}
+
+.circuit-line:nth-child(3) {
+    width: 50px;
+    height: 2px;
+    bottom: 20px;
+    left: 20px;
+}
+
+.circuit-component {
+    position: absolute;
+    background: #e74c3c;
+    border-radius: 2px;
+}
+
+.circuit-component:nth-child(4) {
+    width: 8px;
+    height: 8px;
+    top: 15px;
+    left: 25px;
+}
+
+.circuit-component:nth-child(5) {
+    width: 6px;
+    height: 6px;
+    top: 35px;
+    right: 25px;
+}
+
+.circuit-component:nth-child(6) {
+    width: 10px;
+    height: 6px;
+    bottom: 15px;
+    left: 30px;
+}
+
+/* Robot Design for Course 5 */
+.robot-design {
+    position: relative;
+    width: 80px;
+    height: 100px;
+}
+
+.robot-head {
+    width: 50px;
+    height: 40px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.robot-body {
+    width: 60px;
+    height: 50px;
+    background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+    border-radius: 6px;
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.robot-arm {
+    width: 15px;
+    height: 30px;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    border-radius: 4px;
+    position: absolute;
+    top: 40px;
+}
+
+.robot-arm:nth-child(3) {
+    left: 5px;
+    transform: rotate(-20deg);
+}
+
+.robot-arm:nth-child(4) {
+    right: 5px;
+    transform: rotate(20deg);
+}
+
+/* Architecture for Course 6 */
+.architecture {
+    position: relative;
+    width: 120px;
+    height: 80px;
+}
+
+.building {
+    position: absolute;
+    background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+    border-radius: 2px;
+}
+
+.building:nth-child(1) {
+    width: 25px;
+    height: 60px;
+    left: 10px;
+    bottom: 0;
+}
+
+.building:nth-child(2) {
+    width: 30px;
+    height: 45px;
+    left: 45px;
+    bottom: 0;
+}
+
+.building:nth-child(3) {
+    width: 20px;
+    height: 70px;
+    right: 10px;
+    bottom: 0;
+}
+
+.tree {
+    width: 15px;
+    height: 25px;
+    background: linear-gradient(135deg, #27ae60, #229954);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    position: absolute;
+    left: 80px;
+    bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .nav-tabs {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .nav-tab {
+        min-width: auto;
+    }
+    
+    .course-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .course-image {
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-title {
+        font-size: 1.8rem;
+    }
+}
